@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Surekha Exports | Sports Infrastructure Guide</title>
+  <meta name="description" content="A single-page blog design for Surekha Exports covering badminton court construction, indoor badminton court construction cost, and football turf dimensions." />
+  <style>
+    :root{
+      --bg:#070A12;
+      --card:#0D1224cc;
+      --card2:#0B1022;
+      --text:#E9ECFF;
+      --muted:#B6BCE0;
+      --line:#232A4B;
+      --accent:#7C5CFF;
+      --accent2:#26D7C4;
+      --accent3:#FF4FD8;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(124,92,255,.35), transparent 60%),
+        radial-gradient(900px 500px at 85% 20%, rgba(38,215,196,.25), transparent 60%),
+        radial-gradient(700px 450px at 55% 85%, rgba(255,79,216,.18), transparent 60%),
+        linear-gradient(180deg, #070A12 0%, #070A12 55%, #060815 100%);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .container{ width:min(1160px, 92%); margin:0 auto; }
+
+    /* Decorative grid */
+    .grid-overlay{
+      position:fixed; inset:0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(circle at 50% 30%, rgba(0,0,0,.85), transparent 70%);
+      pointer-events:none;
+      opacity:.35;
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7,10,18,.82), rgba(7,10,18,.55));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.3px;
+    }
+    .logo{
+      width:36px; height:36px; border-radius:12px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08) 40%),
+        linear-gradient(135deg, var(--accent), var(--accent2) 55%, var(--accent3));
+      box-shadow: 0 8px 28px rgba(124,92,255,.28);
+    }
+    .navlinks{
+      display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .navlinks a{
+      color:var(--muted);
+      font-size:14px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .navlinks a:hover{
+      color:var(--text);
+      border-color:rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+    }
+
+    /* Hero */
+    .hero{ padding: 40px 0 18px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .hero-card{
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(300px 180px at 20% 15%, rgba(124,92,255,.35), transparent 70%),
+                  radial-gradient(260px 160px at 85% 30%, rgba(38,215,196,.25), transparent 70%);
+      opacity:.9;
+      pointer-events:none;
+    }
+    .hero-card > *{ position:relative; z-index:1; }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      color:var(--muted);
+      font-weight:600;
+      font-size:13px;
+      letter-spacing:.25px;
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      width:max-content;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(124,92,255,.18);
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height:1.1;
+      letter-spacing:-.5px;
+    }
+    .lead{
+      margin:0 0 16px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+    .hero-actions{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-weight:700;
+      font-size:14px;
+      transition:.2s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); }
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#070A12;
+      box-shadow: 0 12px 34px rgba(124,92,255,.25);
+    }
+
+    .mini{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .stat-card{
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(13,18,36,.78), rgba(11,16,34,.55));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .stat-card:before{
+      content:"";
+      position:absolute; inset:-1px;
+      background: radial-gradient(260px 180px at 15% 20%, rgba(255,79,216,.20), transparent 70%),
+                  radial-gradient(260px 180px at 80% 40%, rgba(38,215,196,.16), transparent 70%);
+      opacity:1;
+      pointer-events:none;
+    }
+    .stat-card > *{ position:relative; z-index:1; }
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .pill{
+      padding:7px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+    }
+
+    /* Content layout */
+    main{
+      padding: 16px 0 64px;
+    }
+    .content-grid{
+      display:grid;
+      grid-template-columns: 280px 1fr;
+      gap: 22px;
+      align-items:start;
+      margin-top: 20px;
+    }
+    aside{
+      position:sticky; top: 84px;
+    }
+    .toc{
+      border-radius: var(--radius);
+      background: rgba(13,18,36,.62);
+      border:1px solid rgba(255,255,255,.10);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .toc h3{
+      margin:0 0 10px;
+      font-size: 14px;
+      letter-spacing:.4px;
+      text-transform:uppercase;
+      color: var(--muted);
+    }
+    .toc a{
+      display:flex; gap:10px;
+      padding: 10px 10px;
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .toc a:hover{
+      color: var(--text);
+      border-color: rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+    }
+    .toc .num{
+      width:24px; height:24px; display:grid; place-items:center;
+      border-radius: 10px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      font-weight:800;
+      font-size: 12px;
+      color: var(--text);
+    }
+
+    article{
+      border-radius: var(--radius);
+      background: rgba(13,18,36,.52);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      overflow:hidden;
+      position:relative;
+    }
+    article:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(400px 260px at 25% 8%, rgba(124,92,255,.18), transparent 70%),
+        radial-gradient(420px 240px at 90% 18%, rgba(38,215,196,.12), transparent 70%);
+      pointer-events:none;
+      opacity:1;
+    }
+    article > *{ position:relative; z-index:1; }
+
+    h2{
+      margin: 18px 0 10px;
+      font-size: 22px;
+      letter-spacing:-.2px;
+    }
+    p{ margin: 10px 0; color: var(--text); }
+    .muted{ color: var(--muted); }
+
+    .divider{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent);
+      margin: 18px 0;
+      border:0;
+    }
+
+    .callout{
+      border-radius: 18px;
+      padding: 16px 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(135deg, rgba(124,92,255,.14), rgba(38,215,196,.10));
+      margin: 14px 0;
+    }
+    .callout strong{ display:block; margin-bottom:6px; }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 16px 0 8px;
+    }
+    .card{
+      border-radius: 16px;
+      padding: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .card h4{ margin:0 0 6px; font-size:14px; }
+    .card p{ margin:0; color:var(--muted); font-size:13px; }
+
+    /* Pretty links */
+    .kw{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-weight: 700;
+      transition:.2s ease;
+      white-space: nowrap;
+    }
+    .kw:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.18);
+    }
+    .kw .arrow{
+      width:18px; height:18px;
+      border-radius: 8px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#070A12;
+      font-weight:900;
+      font-size: 12px;
+    }
+
+    /* FAQ accordion (CSS-only) */
+    details{
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      padding: 12px 14px;
+      margin: 10px 0;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    summary .chev{
+      width:26px; height:26px;
+      border-radius: 10px;
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      transition: .2s ease;
+      color: var(--muted);
+      flex: 0 0 auto;
+    }
+    details[open] summary .chev{
+      transform: rotate(180deg);
+      color: var(--text);
+      border-color: rgba(255,255,255,.18);
+    }
+
+    footer{
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns:1fr; }
+      .content-grid{ grid-template-columns:1fr; }
+      aside{ position:relative; top:auto; }
+      .cards{ grid-template-columns:1fr; }
+      .navlinks{ display:none; }
+    }
+
+    /* Print-friendly */
+    @media print{
+      header, .grid-overlay, aside, .hero-actions{ display:none !important; }
+      body{ background:#fff; color:#000; }
+      article, .hero-card, .stat-card{ box-shadow:none; background:#fff; border:1px solid #ddd; }
+      .kw{ border:1px solid #aaa; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>Surekha Exports <span style="opacity:.6;font-weight:700;">/ Sports Infra Blog</span></div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#badminton">Badminton</a>
+        <a href="#cost">Cost</a>
+        <a href="#football">Football Turf</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <div class="kicker"><span class="dot"></span> Practical guide for sports facility planning</div>
+        <h1>Build a world-class court, not just a “surface.”</h1>
+        <p class="lead">
+          If you’re planning a sports facility, the details matter: base prep, cushioning, drainage, and standards.
+          Here’s a clean, skimmable guide covering badminton + football turf essentials.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#read">Read the blog</a>
+          <a class="btn" href="#contact">Quick contact section</a>
+        </div>
+      </div>
+
+      <div class="mini">
+        <div class="stat-card">
+          <div class="meta">
+            <span class="pill">✅ Single-page layout</span>
+            <span class="pill">⚡ Fast & responsive</span>
+            <span class="pill">🎨 Creative UI</span>
+          </div>
+          <hr class="divider" />
+          
+        </div>
+
+        <div class="stat-card">
+          <div class="meta">
+            <span class="pill">🔗 Backlink-ready</span>
+            <span class="pill">🧱 Sectioned content</span>
+          </div>
+          <hr class="divider" />
+          <p style="margin:0;">
+            Keywords:
+            <a class="kw" href="https://surekhaexports.com/products/badminton-court-installation/" target="_blank" rel="nofollow noopener">
+              badminton court construction <span class="arrow">↗</span>
+            </a>
+            <a class="kw" href="https://surekhaexports.com/products/badminton-court-installation/" target="_blank" rel="nofollow noopener">
+              indoor badminton court construction cost <span class="arrow">↗</span>
+            </a>
+            <a class="kw" href="https://surekhaexports.com/products/artificial-football-turf-dimensions/" target="_blank" rel="nofollow noopener">
+              football turf dimensions <span class="arrow">↗</span>
+            </a>
+          </p>
+          <p class="muted" style="margin:10px 0 0;">
+            Note: Browsers can’t force “do-follow.” That depends on where you publish + the site’s settings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" id="read">
+    <div class="content-grid">
+      <aside>
+        <div class="toc" role="navigation" aria-label="Table of contents">
+          <h3>On this page</h3>
+          <a href="#intro"><span class="num">1</span> Introduction</a>
+          <a href="#badminton"><span class="num">2</span> Badminton court essentials</a>
+          <a href="#cost"><span class="num">3</span> Indoor cost breakdown</a>
+          <a href="#football"><span class="num">4</span> Football turf planning</a>
+          <a href="#checklist"><span class="num">5</span> Quick checklist</a>
+          <a href="#faq"><span class="num">6</span> FAQ</a>
+          <a href="#contact"><span class="num">7</span> Contact block</a>
+        </div>
+      </aside>
+
+      <article>
+        <p class="muted" id="intro">
+          <strong>Published:</strong> <span>Single-page template</span> • <strong>Reading time:</strong> ~5 minutes
+        </p>
+
+        <h2>Introduction</h2>
+        <p>
+          Most sports projects go wrong in the “invisible” layers—base preparation, leveling, drainage, cushioning,
+          and the way everything is finished. The visible surface might look perfect on day one, but performance and
+          durability come from the structure underneath.
+        </p>
+        <div class="callout">
+          <strong>Pro tip:</strong>
+          If you want consistent play + fewer repairs, lock your measurements and standards first—then build the surface system around them.
+        </div>
+
+        <hr class="divider" />
+
+        <h2 id="badminton">Badminton court essentials that actually matter</h2>
+        <p>
+          A professional setup begins with correct alignment and surface behavior. Your
+          <a class="kw" href="https://surekhaexports.com/products/badminton-court-installation/" target="_blank" rel="nofollow noopener">
+            badminton court construction <span class="arrow">↗</span>
+          </a>
+          should focus on three things: shock absorption, grip, and levelness.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h4>Base & leveling</h4>
+            <p>Flatness keeps footwork safe and reduces joint strain during fast movement.</p>
+          </div>
+          <div class="card">
+            <h4>Cushioning system</h4>
+            <p>Multi-layer systems improve comfort, reduce fatigue, and help prevent injuries.</p>
+          </div>
+          <div class="card">
+            <h4>Lighting & glare</h4>
+            <p>Uniform lighting helps tracking shuttle speed and prevents eye strain.</p>
+          </div>
+        </div>
+
+        <p>
+          If your court is indoors, ventilation and humidity control are also big deals—especially when the space is busy.
+          Good air movement keeps the playing experience comfortable and helps surfaces last longer.
+        </p>
+
+        <hr class="divider" />
+
+        <h2 id="cost">What affects indoor badminton court construction cost?</h2>
+        <p>
+          People often ask about the
+          <a class="kw" href="https://surekhaexports.com/products/badminton-court-installation/" target="_blank" rel="nofollow noopener">
+            indoor badminton court construction cost <span class="arrow">↗</span>
+          </a>
+          —and the truth is: it’s not just “flooring price.” Your budget is shaped by the whole system.
+        </p>
+
+        <div class="callout">
+          <strong>Cost drivers (quick view)</strong>
+          Surface type, cushioning layers, hall structure/roofing, lighting, and finishing (skirting, markings, accessories).
+        </div>
+
+        <p class="muted">
+          To keep costs predictable, define your requirements early: training vs. tournament-grade, number of courts, ceiling height,
+          and the expected daily usage.
+        </p>
+
+        <hr class="divider" />
+
+        <h2 id="football">Football turf planning: dimensions + durability</h2>
+        <p>
+          For turf projects, the first win is planning correct
+          <a class="kw" href="https://surekhaexports.com/products/artificial-football-turf-dimensions/" target="_blank" rel="nofollow noopener">
+            football turf dimensions <span class="arrow">↗</span>
+          </a>
+          based on your match format (training, 5s, 7s, etc.). Then, build the right base and drainage so the turf stays playable year-round.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h4>Drainage first</h4>
+            <p>Prevents waterlogging, odors, and premature turf failure.</p>
+          </div>
+          <div class="card">
+            <h4>Shock pad + infill</h4>
+            <p>Improves comfort, ball response, and reduces impact injuries.</p>
+          </div>
+          <div class="card">
+            <h4>Edge finishing</h4>
+            <p>Strong borders + seams keep turf stable under heavy play.</p>
+          </div>
+        </div>
+
+        <p>
+          If you’re building for commercial play, prioritize durability: high stitch density, strong backing, and proper infill depth.
+          That’s what keeps the surface consistent even with daily bookings.
+        </p>
+
+        <hr class="divider" />
+
+        <h2 id="checklist">Quick checklist before you start</h2>
+        <ul style="margin:10px 0 0; padding-left: 18px; color: var(--muted);">
+          <li>Finalize sport format + standards (training/tournament, 5s/7s/full field).</li>
+          <li>Confirm site conditions (leveling, moisture, drainage plan).</li>
+          <li>Pick surface system (cushioning, material, thickness) based on usage.</li>
+          <li>Plan lighting, ventilation, and safety padding early.</li>
+          <li>Lock timeline + maintenance plan (cleaning, brushing, infill top-ups, etc.).</li>
+        </ul>
+
+        <hr class="divider" />
+
+        <h2 id="faq">FAQ</h2>
+        <details>
+          <summary>
+            What makes a sports surface “professional-grade”?
+            <span class="chev">⌄</span>
+          </summary>
+          <p class="muted">
+            Consistent performance + safety. That means correct base preparation, proper cushioning/shock absorption, accurate markings,
+            and finishing that holds up under repeated use.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Can I install a court/turf without drainage?
+            <span class="chev">⌄</span>
+          </summary>
+          <p class="muted">
+            Not recommended. Drainage protects the base layers, improves playability, and reduces long-term repair costs—especially for outdoor builds.
+          </p>
+        </details>
+
+        
+
+        <hr class="divider" />
+
+        <h2 id="contact">Contact / CTA block</h2>
+        <div class="callout">
+          <strong>Need a quote or consultation?</strong>
+          <p class="muted" style="margin:6px 0 0;">
+            surekhaexports1234@gmail.com
+          </p>
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="https://surekhaexports.com/" target="_blank" rel="noopener">Visit Website</a>
+            <a class="btn" href="#intro">Back to top</a>
+          </div>
+        </div>
+
+        <footer>
+          <div>© <span id="year"></span> Surekha Exports • </div>
+          
+        </footer>
+
+        <script>
+          // Small helper for year (optional)
+          document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
